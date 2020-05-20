@@ -16,35 +16,7 @@ import java.util.Set;
 
 public class Robot extends LightningRobot {
 
-    public static final boolean DRIVETRAIN_LOGGING_ENABLED = true;
-
-    public Robot() {
-        super(getRobot());
-    }
-
-    @Override
-    public void robotInit() {
-        super.robotInit();
-
-        Set<String> names = getContainer().getAutonomousCommands().keySet();
-        for(var name : names) {
-            registerAutonomousCommmand(name, getContainer().getAutonomousCommands().get(name));
-            System.out.println("Registered " + name + " command for auton");
-        }
-        
-    }
-
-    @Override
-    public void teleopInit() {
-        super.teleopInit();
-        // getContainer().getDrivetrain().resetSensorVals();
-    }
-
-    @Override
-    public void autonomousInit() {
-        super.autonomousInit();
-        // getContainer().getDrivetrain().resetSensorVals();
-    }
+    public Robot() { super(getRobot()); }
 
     private static LightningContainer getRobot() {
         return null;

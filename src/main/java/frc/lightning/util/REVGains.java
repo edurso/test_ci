@@ -5,7 +5,7 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot.misc;
+package frc.lightning.util;
 
 import com.revrobotics.CANPIDController;
 
