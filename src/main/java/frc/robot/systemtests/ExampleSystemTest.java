@@ -7,8 +7,8 @@
 
 package frc.robot.systemtests;
 
+import frc.lightning.fault.FaultCode.Codes;
 import frc.lightning.testing.SystemTest;
-import frc.lightning.util.FaultCode.Codes;
 
 /**
  * Add your docs here.

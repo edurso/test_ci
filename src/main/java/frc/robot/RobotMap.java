@@ -22,4 +22,8 @@ public class RobotMap {
     public static final int RIGHT_ENCODER_CHANNEL_A = 2;
     public static final int RIGHT_ENCODER_CHANNEL_B = 3;
 
+    // CORE
+    public static final int COMPRESSOR_ID = 20;
+    public static final int PIGEON_ID = 8;
+
 }

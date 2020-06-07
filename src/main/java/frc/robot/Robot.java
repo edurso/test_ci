@@ -9,6 +9,7 @@ package frc.robot;
 
 import frc.lightning.LightningContainer;
 import frc.lightning.LightningRobot;
+import frc.robot.containers.TwikiContainer;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,27 +19,12 @@ public class Robot extends LightningRobot {
     public Robot() { super(getRobot()); }
 
     private static LightningContainer getRobot() {
+        if(isTwiki()) return new TwikiContainer();
         return null;
-    }
-
-    public static boolean isNebula() {
-        return Files.exists(Paths.get("/home/lvuser/nebula"));
     }
 
     public static boolean isTwiki() {
         return Files.exists(Paths.get("/home/lvuser/twiki"));
-    }
-
-    public static boolean isQuasar() {
-        return Files.exists(Paths.get("/home/lvuser/quasar"));
-    }
-
-    public static boolean isIllusion() {
-        return Files.exists(Paths.get("/home/lvuser/illusion"));
-    }
-
-    public static boolean isGreg() {
-        return !(isNebula() || isTwiki() || isIllusion() || isQuasar());
     }
 
 }
