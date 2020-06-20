@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: authorize github
+      run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
     - name: checkout repository
       uses: actions/checkout@v2
     - name: initialize submodules
