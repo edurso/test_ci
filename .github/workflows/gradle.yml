@@ -12,7 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: mk ssh
+    - name: mkdir
+      run: mkdir ~/.ssh/
+    - name: mkfile
       run: cat > ~/.ssh/known_hosts
     - name: authorize github
       run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
