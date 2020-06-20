@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - name: authorize github
+      run: touch ~/.ssh/known_hosts
       run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
     - name: checkout repository
       uses: actions/checkout@v2
