@@ -15,9 +15,7 @@ jobs:
     - name: checkout repository
       uses: actions/checkout@v2
     - name: initialize submodules
-      uses: srt32/git-actions@v0.0.3
-      with:
-        args: git submodule update --init --recursive
+      uses: textbook/git-checkout-submodule-action@master
     - name: config jdk 11
       uses: actions/setup-java@v1
       with:
