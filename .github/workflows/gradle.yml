@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: mk ssh
-      run: touch ~/.ssh/known_hosts
+      run: cat > ~/.ssh/known_hosts
     - name: authorize github
       run: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
     - name: checkout repository
