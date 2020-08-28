@@ -1,6 +1,5 @@
 package frc.lightning.util;
 
-import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
